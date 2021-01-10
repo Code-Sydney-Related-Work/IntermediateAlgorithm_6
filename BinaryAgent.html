@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+            function binaryAgent(str){
+                let tempArray = str.split(" "); // Conversion of String into Array
+                let tempArray2 = [];
+                let tempArray3 = [];
+                let tempStr = "";
+                let tempArrEle;
+                let tempArr2Ele;
+                let tempArr3Ele;
+                for(tempArrEle of tempArray) 
+                {
+                    tempArray2.push(parseInt(tempArrEle, 2).toString(10));   // Conversion of binary numbers to String             
+                }
+                for(tempArr2Ele of tempArray2) 
+                {
+                    tempArray3.push(String.fromCharCode(tempArr2Ele));
+                } 
+                console.log(tempArray3); 
+                for(tempArr3Ele of tempArray3)
+                {
+                    tempStr += tempArr3Ele;
+                }
+                console.log(tempStr);
+                return tempStr;
+            }
+            binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+        </script>
+    </body>
+</html>
